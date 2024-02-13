@@ -20,7 +20,7 @@ func printInstructions() {
     fmt.Println("3. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins.")
     fmt.Println("4. If all cells are filled and no player has three in a row, the game is a draw.")
     fmt.Println("5. To make a move, enter the row and column numbers corresponding to the cell.")
-    fmt.Println("   For example, to place your symbol in the top-right corner, enter '1 3'.")
+    fmt.Println("   For example, to place your symbol in the top-left corner, enter '0 0'.")
     fmt.Println("6. If you try to occupy an already filled cell, it will be considered a penalty.")
     fmt.Println("   Consecutively doing so for 3 times will result in a defeat.")
     fmt.Println("7. Have fun playing!")
