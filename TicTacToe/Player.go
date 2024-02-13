@@ -27,3 +27,17 @@ func (player Player) PrintPlayer() {
 func (player *Player) IncrementPenalty() {
 	player.penaltyCounter = 1 + player.penaltyCounter
 }
+
+func PrintPlayersInformation(player1,player2 Player){
+	fmt.Println("Player 1:")
+    fmt.Println("Name:", player1.name)
+    fmt.Println("Symbol:", string(player1.symbol))
+    fmt.Println("Penalty Counter:", player1.penaltyCounter)
+
+    fmt.Println("\nPlayer 2:")
+    fmt.Println("Name:", player2.name)
+    fmt.Println("Symbol:", string(player2.symbol))
+    fmt.Println("Penalty Counter:", player2.penaltyCounter)
+
+    fmt.Println("\n" + "------------------------------------------")
+}

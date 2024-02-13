@@ -26,10 +26,25 @@ func printInstructions() {
     fmt.Println("7. Have fun playing!")
 }
 
+func playerNameInput() (string, string){
+	var p1,p2 string
+	fmt.Println("Enter name for Player 1:")
+    fmt.Scanln(&p1)
+
+    fmt.Println("Enter name for Player 2:")
+    fmt.Scanln(&p2)
+
+	return p1,p2
+}
+
 func initiateGame(){
-	var player1 = TTT.CreatePlayer("P1", 'O')
-	var player2 = TTT.CreatePlayer("P2", 'X')
+	fmt.Println("-------------------------------------")
+	fmt.Println("Lets Begin!!!")
+	p1,p2 := playerNameInput()
+	var player1 = TTT.CreatePlayer(p1, 'O')
+	var player2 = TTT.CreatePlayer(p2, 'X')
 	var game = TTT.CreateGame(player1, player2)
+	TTT.PrintPlayersInformation(player1,player2)
 	game.StartGame()
 	fmt.Println("Final:")
 	TTT.PrintGame(game)
